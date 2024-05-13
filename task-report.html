@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/logo.jpg" type="image/x-icon">
+    <title>Travel Agency:Report</title>
+    <style>
+        .report{
+            color: #ddaa33;
+            border-left: 4px solid #ddaa33;
+        }
+        header{
+            display: flex;
+            padding-left: 1040px;
+            height: 45px;
+            font-family: sans-serif;
+
+        }
+        header p{
+            margin-top: 4px;
+        }
+        header img{
+            width: 30px;
+            height: 25px;
+            padding: 0px 20px;
+        }
+        #Logo{
+            width: 120px;
+            padding: 0 0 30px 30px;
+        }
+        aside{
+            display: flex;
+            flex-direction: column;
+            width: 255px;
+            float: left;
+            /* position: fixed; */
+        }
+        aside img{
+            padding-right: 10px;
+        } 
+        aside a {
+            color: black;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            margin: 13px 0px;
+            width: 255px;
+            padding: 13px 0px;
+            padding-left: 12px;
+            }
+        #article{
+            background-color: #fafafb;
+            padding-right: 105px;
+            float: right;
+            height: 800px;
+        }
+        #article h2{
+            font-family:sans-serif ;
+            padding-left: 43px;
+            padding-top: 50px;
+        }
+        #article p{
+            padding-left: 43px;
+            width: 310px;
+            font-size: 20px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 100;
+            opacity: 0.4;
+        }
+        h3{
+            font-family:sans-serif ;
+            padding-bottom: 30px;
+        }
+        #section{
+            display:flex;
+            overflow: hidden;
+        }
+        #content{
+            background-color: #ffffff;
+            margin-left: 40px;
+            width: 905px;
+            font-family: sans-serif;
+            height: 600px;
+            border-radius: 15px;
+        }
+        #up-arrow{
+            padding-left: 100px;
+        }
+        #option{
+            display: flex;
+            flex-direction: column;
+        }
+        #option a{
+            width: 255px;
+            padding: 0px 0px;
+            padding-left: 74px;
+            color: #484848;
+        }
+        .custom-line, .uncustom-line{
+            display: flex;
+        }
+        .custom-line{
+            background-color: #f6f6f6;
+        }
+        .follow{
+            font-family: 'Gill Sans', 'Gill Sans MT';
+            padding-left: 43px;
+            font-size: 19px;
+            padding-top: 21px;
+        }
+        .follow span{
+            color: #ddaa33;
+        }
+        .due-date{
+            padding-top: 21px;
+            font-size: 17px;
+            font-weight: bold;
+        }
+        #due-today{
+            color: #ab201f;
+        }
+        #due-4-days{
+            color: #ab201f;
+        }
+        #due-7-days{
+            color: #ddaa33;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <img src="image/bell.svg" alt="notification">
+        <p>Kelin</p>
+        <img src="image/image-avatar.png">
+    </header>
+    <div id="section">
+        <aside>
+            <img src="image/logo.jpg" alt="Travel Agency Logo" id="Logo">
+            <a href="workspace.html " class="workspace">   <img src="image\layout-wtf.svg"          >Workspace</a>
+            <a href="client.html    " class="client">      <img src="image/people-fill.svg"         >Clients</a>
+            <a href="schedule.html  " class="schedule">    <img src="image/journal-text.svg"        >Schecule appointment</a>
+            <a href="payment.html   " class="payment">     <img src="image/file-earmark-text.svg"   >Payment</a>
+            <a href="task.html      " class="task">        <img src="image/list-check.svg">Task</a>
+            <a href="messages.html  " class="messages">    <img src="image/chat-dots.svg"           >Messages</a>
+            <a href="report.html    " class="report">      <img src="image/all-colored-svg/report.svg"     >Reports <img src="image/caret-up-fill.svg" id="up-arrow"></a>
+            <div id="option">
+                <a href="report.html">Activity Report</a>
+                <a href="task-report.html">Task report</a>
+            </div>
+        </aside>
+
+        <div id="article">
+            <h2>Task Report</h2> 
+            <p>View all Task report</p>
+            <div id="content">
+                <div class="custom-line">
+                    <div>
+                        <div class="follow">Follow up with <span>Odusote Mayokun</span></div>
+                        <p>example@platform.com</p>
+                        <p>+234(0)816073668</p>
+                    </div>
+                    <div>
+                        <p>Due on: 1/15/2021</p>
+                        <p>Created on:1/12/2021</p>
+                    </div>
+                    <div class="due-date">
+                        <span id="due-today">Due Today</span>
+                    </div>
+                </div>
+                <div class="uncustom-line">
+                    <div>
+                        <div class="follow">Follow up with <span>Odusote Mayokun</span></div>
+                        <p>example@platform.com</p>
+                        <p>+234(0)816073668</p>
+                    </div>
+                    <div>
+                        <p>Due on: 1/15/2021</p>
+                        <p>Created on:1/12/2021</p>
+                    </div>
+                    <div class="due-date">
+                        <span id="due-4-days">Due in 4 days</span>
+                    </div>
+                </div>
+                <div class="custom-line">
+                    <div>
+                        <div class="follow">Follow up with <span>Odusote Mayokun</span></div>
+                        <p>example@platform.com</p>
+                        <p>+234(0)816073668</p>
+                    </div>
+                    <div>
+                        <p>Due on: 1/15/2021</p>
+                        <p>Created on:1/12/2021</p>
+                    </div>
+                    <div class="due-date">
+                        <span id="due-7-days">Due in 7 days</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

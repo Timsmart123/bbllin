@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/logo.jpg" type="image/x-icon">
+    <title>Add a new client</title>
+    <style>
+        .client{
+            color: #ddaa33;
+            border-left: 4px solid #ddaa33;
+        }
+        header{
+            display: flex;
+            padding-left: 1040px;
+            height: 45px;
+            font-family: sans-serif;
+
+        }
+        header p{
+            margin-top: 4px;
+        }
+        header img{
+            width: 30px;
+            height: 25px;
+            padding: 0px 20px;
+        }
+        #Logo{
+            width: 120px;
+            padding: 0 0 30px 30px;
+        }
+        aside{
+            display: flex;
+            flex-direction: column;
+            width: 255px;
+            float: left;
+        }
+        aside img{
+            padding-right: 10px;
+        }
+
+        aside a {
+            color: black;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            margin: 13px 0px;
+            width: 255px;
+            padding: 13px 0px;
+            padding-left: 12px;
+            }
+        #article{
+            background-color: #fafafb;
+            padding-right: 105px;
+            float: right;
+            height: 1300px;
+        }
+        #article h2{
+            font-family: sans-serif;
+            padding-left: 43px;
+            padding-top: 40px;
+            margin-bottom: -15px;
+        }
+        #article p{
+            padding-left: 43px;
+            font-size: 20px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 100;
+            opacity: 0.4;
+        }
+        h3{
+            font-family:sans-serif ;
+            padding-bottom: 30px;
+        }
+        #section{
+            display:flex;
+            overflow: hidden;
+        }
+        label{
+            font-weight: bold;
+        }
+        #content{
+            background-color: #ffffff;
+            margin-left: 40px;
+            padding-left: 40px;
+            width: 870px;
+            font-family: sans-serif;
+            height: 1170px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        form{
+            display: flex;
+        }
+        input, select,textarea{
+            display: block;
+        }
+        #birthplace, #birthdate{
+            width: 165px;
+            height: 50px;
+            margin-right: 20px;
+        }
+        input{
+            height: 50px;
+            width: 360px;
+        }
+        select{
+            height: 56px;
+            width: 367px;
+            /* margin-bottom: 18.5px; */
+        }
+        .birth{
+            display: flex;
+            flex-direction: row;
+        }
+        .side1{
+            width: 455px;
+        }
+        textarea{
+            height: 50px;
+            width: 363px;
+        }
+        #add-new{
+            margin-left: -81px;
+        }
+        #clientpic {
+            width: 828px;
+            background-color: #fafafa;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            margin-top:80px
+        }
+        .colored{
+            font-weight: 100;
+            color: rgb(171 32 31);
+        }
+        .clienticon {
+            display: inline;
+            width: 13%;
+            margin-right: 35px;
+            margin-bottom: 30px;
+        }
+        .upload {
+            width: 160px;
+            height: 50px;
+            background-color: #ddaa33;
+            color: white;
+            border: 1px solid #ddaa33;
+            border-radius: 5px;
+            font-size: medium;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .webcam {
+            width: 160px;
+            height: 50px;
+            background-color: white;
+            color: #ab201f;
+            border: 1px solid #ab201f;
+            border-radius: 5px;
+            font-size: medium;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+        #flex{
+            display: flex;
+        }
+        h4{
+            font-size: 19px;
+        }
+        .clienttext {
+            font-weight: bold;
+            padding-top: 30px;
+        }
+        .clienticon, .clienttext {
+            margin-left: 30px;
+        }
+        #cancel{
+            width: 125px;
+            height: 40px;
+            margin-top: 30px;
+            background-color: #ffffff;
+            color: #ab201f;
+            border: 1px solid #ab201f;
+            border-radius: 5px;
+            font-size: medium;
+            font-weight: bold;
+            margin-left: 93px;
+            margin-right: 12px;
+            }
+        .save {
+            width: 125px;
+            height: 40px;
+            background-color: #ddaa33;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: medium;
+            font-weight: bold;
+            }
+    </style>
+
+</head>
+<body>
+    <header>
+        <img src="image/bell.svg" alt="notification">
+        <p>Kelin</p>
+        <img src="image/image-avatar.png">
+    </header>
+    <div id="section">
+        <aside>
+            <img src="image/logo.jpg" alt="Travel Agency Logo" id="Logo">
+            <a href="workspace.html " class="workspace">   <img src="image\layout-wtf.svg"          >Workspace</a>
+            <a href="client.html    " class="client">      <img src="image/all-colored-svg/client.svg"         >Clients</a>
+            <a href="schedule.html  " class="schedule">    <img src="image/journal-text.svg"        >Schecule appointment</a>
+            <a href="payment.html   " class="payment">     <img src="image/file-earmark-text.svg"   >Payment</a>
+            <a href="task.html      " class="task">        <img src="image/list-check.svg">Task</a>
+            <a href="messages.html  " class="messages">    <img src="image/chat-dots.svg"           >Messages</a>
+            <a href="report.html    " class="report">      <img src="image/clipboard2-data.svg"     >Reports</a>
+        </aside>
+
+        <div id="article">
+            <h2>Add Client</h2> 
+            <div id="content">
+                <p id="add-new">Add a new Client here</p>
+                <div id="clientpic">
+                    <h4 class="clienttext">Client's Picture</h4>
+                    <span id="flex">
+                        <img src="image\all-colored-svg\person-circle.svg" alt="" class="clienticon">
+                        <div id="buttons"> 
+                            <button class="upload">Upload Image</button>
+                            <button class="webcam">Use Webcam</button>
+                        </div>
+                    </span>
+                </div>
+                <h4>Enter clients details</h4>
+                <form action="">
+                    <div class="side1">
+                        <label for="name" id="labelname">Full Name</label> <br>
+                        <input type="text" id="name" name="name"><br>
+                        <label for="applicant" id="labelapplicant">Applicant Fullname <span class="colored">(as shown in passport)</span></label> <br>
+                        <input type="text" id="applicant"><br>
+                        <div class="birth">
+                            <span>
+                                <label for="birthplace" id="labelbirthplace">Place of Birth</label><br>
+                                <input type="text" id="birthplace"><br>
+                            </span>
+                            <span>
+                                <label for="birthdate" id="labelbirthdate">Date of Birth</label> <br>
+                                <input type="text" id="birthdate"><br>
+                            </span>
+                        </div>
+                        <label for="marital" id="labelmarital">Marital Status </label> <br>
+                        <select name="marital" id="marital">
+                            <option value=""></option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                        </select><br>
+                        <label for="occupation" id="labeloccupation">Current Occupation</label> <br>
+                        <input type="text" id="occupation" name="occupation"> <br>
+                        <label for="residentual" id="labelresidentual">Residential Address</label> <br>
+                        <textarea name="residential" id="residential" cols="20" rows="1"></textarea><br>
+                        <label for="interest" id="labelinterest">Country of Interest</label> <br>
+                        <select name="interest" id="interest"><br>
+                            <option value=""></option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                        </select>
+                    </div>
+                    <div class="side2">
+                        <label for="email" id="labelemail">Email</label> <br>
+                        <input type="email" id="email"><br>
+                        <label for="gender" id="labelgender">Gender</label> <br>
+                        <select name="gender" id="gender">
+                            <option value=""></option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <label for="residentual" id="labelresidentual">Residential Address</label>
+                            <option value="">Osadugbe Ikeloluwa</option><br>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                        </select><br>
+                        <label for="citizenship" id="labelcitizenship">Country of Citizenship</label> <br>
+                        <select name="citizenship" id="citizenship">
+                            <option value=""></option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                        </select><br>
+                        <label for="education" id="labeleducation">Education <span class="colored">(Client's highest level of Education)</span></label> <br>
+                        <select name="education" id="education">
+                            <option value=""></option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                            <option value="">Osadugbe Ikeloluwa</option>
+                        </select><br>
+                        <label for="number" id="labelnumber">Phone Number</label> <br>
+                        <input type="number" id="number"><br>
+                        <label for="mailing" id="labelmailing">Mailing Address</label> <br>
+                        <textarea name="mailing" id="mailing" cols="20" rows="1"></textarea><br>
+                        <label for="travelling" id="labeltravelling">Purpose of Travelling</label> <br>
+                        <input type="text" id="travelling"><br>
+
+                        <button id="cancel" > Cancel</button>
+                        <button class="save">Save</button> 
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

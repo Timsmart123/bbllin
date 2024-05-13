@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/logo.jpg" type="image/x-icon">
+    <title>Messages :Travel Agency</title>
+    <style>
+        .messages{
+            color: #ddaa33;
+            border-left: 4px solid #ddaa33;
+        }
+        header{
+            display: flex;
+            padding-left: 1040px;
+            height: 45px;
+            font-family: sans-serif;
+        }
+        header p{
+            margin-top: 4px;
+        }
+        header img{
+            width: 30px;
+            height: 25px;
+            padding: 0px 20px;
+        }
+        #Logo{
+            width: 120px;
+            padding: 0 0 30px 30px;
+        }
+        aside{
+            display: flex;
+            flex-direction: column;
+            width: 255px;
+            float: left;
+            /* position: fixed; */
+        }
+        aside img{
+            padding-right: 10px;
+        }
+        a{
+            color: black;
+        }
+        aside a {
+            color: black;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            margin: 13px 0px;
+            width: 255px;
+            padding: 13px 0px;
+            padding-left: 12px;
+                }
+        #article{
+            background-color: #fafafb;
+            padding-right: 40px;
+            float: right;
+            height: 720px;
+        }
+        #article h2{
+            font-family:sans-serif ;
+            padding-left: 43px;
+            padding-top: 50px;
+        }
+        #article p{
+            padding-left: 43px;
+            font-size: 20px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 100;
+            opacity: 0.4;
+        }
+        h3{
+            font-family:sans-serif ;
+            padding-bottom: 30px;
+        }
+        #section{
+            display:flex;
+            overflow: hidden;
+        }
+        #content{
+            background-color: #ffffff;
+            margin-left: 40px;
+            padding-left: 40px;
+            width: 870px;
+            border-radius: 15px;
+            font-family: sans-serif;
+            height: 500px;
+        }
+        button{
+            background-color: #ffffff;
+            padding: 0px;
+            border: none;
+        }
+        nav{
+            border-bottom: 1px solid grey;
+            width: 810px;
+        }
+        #sms{
+            border-top-right-radius: 5px;
+            padding-left: 50px;
+            color: #969ba0;
+            padding:  20px 50px;
+        }
+        .highlight span{
+            border-radius: 30px;
+            background-color: #e3e3e3;
+            font-family: sans-serif;
+            padding: 4px;
+        }
+        button a{
+            text-decoration: none;           
+        }
+        #email{
+            background-color: #ddaa33;
+            color: #ffffff;
+            border-top-left-radius: 5px;
+            padding: 20px 50px;
+        }
+        option{
+            padding: 20px 25px;
+            width: 550px;
+        }
+        label{
+            font-family: sans-serif;
+        }
+        #reciever{
+            width:410px;
+            padding: 20px 25px;
+        }
+        #custom-sides{
+            width: 100%;
+        }
+        .sides{
+            display: flex;
+        }
+        h4{
+            font-family: sans-serif;
+        }
+        input{
+            width: 302px;
+            height: 50px;
+            margin-top: 10px;
+        }
+        #subject-label{
+            display: block;
+            font-weight: bold;
+            padding-left: 35px;
+            padding-top: 17px;
+        }
+        #send{
+            background-color: #ddaa33;
+            padding: 12px 40px;
+            border-radius: 5px;
+            color: #ffffff;
+            margin-left: 650px;
+            margin-top: 130px;
+            font-size: medium;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="image/bell.svg" alt="notification">
+        <p>Kelin</p>
+        <img src="image/image-avatar.png">
+    </header>
+    <div id="section">
+        <aside>
+            <img src="image/logo.jpg" alt="Travel Agency Logo" id="Logo">
+            <a href="workspace.html " class="workspace">   <img src="image\layout-wtf.svg"          >Workspace</a>
+            <a href="client.html    " class="client">      <img src="image/people-fill.svg"         >Clients</a>
+            <a href="schedule.html  " class="schedule">    <img src="image/journal-text.svg"        >Schecule appointment</a>
+            <a href="payment.html   " class="payment">     <img src="image/file-earmark-text.svg"   >Payment</a>
+            <a href="task.html      " class="task">        <img src="image/list-check.svg">Task</a>
+            <a href="messages.html  " class="messages">    <img src="image/all-colored-svg/messages.svg"           >Messages</a>
+            <a href="report.html    " class="report">      <img src="image/clipboard2-data.svg"     >Reports</a>
+        </aside>
+        
+        <div id="article">
+            <h2>Messages</h2> 
+            <p>Send messages to Clients</p>
+            <div id="content">
+                <nav>
+                    <button ><a href="messages.html" id="email" >Email</a></button>
+                    <button type="text" id="sms" onclick="clickMe()">SMS</button>
+                </nav>
+                <div id="custom-sides">
+
+                    <div class="sides">
+                        <div>
+                            <h3><b>Enter message details</b></h3>
+                            <div class="highlight">
+                                <span>Moremi Olarinola <img src="image\x-circle.svg" class="close"></span>
+                                <span>Moremi Olarinola <img src="image\x-circle.svg" class="close"></span>
+                                <span>Moremi Olarinola <img src="image\x-circle.svg" class="close"></span>
+                            </div>
+                        </div>
+                        <div id="subject-label">
+                            <label for="subject" >Subject</label> <br>
+                            <input type="text" name="subject" >
+                        </div>
+                    </div>
+                    
+                    <div class="sides" >
+                        <div style="padding-right: 82px;">
+                            <h4>Reciever(s)</h4>
+                            <select name="reciever" id="reciever">
+                                <option value="Moremi Olarinola">Moremi Olarinola</option>
+                                <option value="Moremi Olarinola">Moremi Olarinola</option>
+                                <option value="Moremi Olarinola">Moremi Olarinola</option>
+                                <option value="Moremi Olarinola">Moremi Olarinola</option>
+                            </select>
+                        </div>
+                        <div>
+                            <h4 >Description</h4>
+                            <textarea name="discription" id="discription" cols="40" rows="5"></textarea>
+                        </div>
+                    </div>
+
+                </div>
+                <button id="send">Send</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script>
+    clickMe = () =>{
+        // Make subject and its input disappear
+        let subject = document.getElementById("subject-label")
+
+        if (subject.style.display === "block") {
+            subject.style.display = "inline"
+
+        } else {
+            subject.style.display = "none"
+        }
+
+        
+        // Change the background color of email to white when clicked
+        let email = document.getElementById("email")
+
+        if (email.style.backgroundColor === "#ddaa33") {
+            email.style.backgroundColor = "white"
+
+        } else{
+            email.style.backgroundColor = "white";
+        }
+
+        // Change the color of email to grey when clicked
+        if (email.style.color === "white") {
+            email.style.color = "#969ba0"
+
+        } else{
+            email.style.color = "#969ba0";
+        }
+        
+        // Change the background color of sms to brown when clicked
+        let sms = document.getElementById("sms")
+
+        if (sms.style.backgroundColor === "white") {
+            sms.style.backgroundColor = "#ddaa33"
+
+        } else{
+            sms.style.backgroundColor = "#ddaa33";
+        }
+
+        // Change the color of sms to white when clicked
+        if (sms.style.color === "#969ba0") {
+            sms.style.color = "white"
+
+        } else{
+            sms.style.color = "white";
+        }
+        
+        
+    }
+    
+</script>
+</html>
