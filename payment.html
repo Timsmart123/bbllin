@@ -6,6 +6,9 @@
     <link rel="shortcut icon" href="image/logo.jpg" type="image/x-icon">
     <title>Travel Agency:Payment</title>
     <style>
+        body{
+            width: fit-content;
+        }
         .payment{
             color: #ddaa33;
             border-left: 4px solid #ddaa33;
@@ -50,7 +53,7 @@
         }
         #article{
             background-color: #fafafb;
-            padding-right: 105px;
+            padding-right: 43px;
             float: right;
             height: 720px;
         }
@@ -83,7 +86,7 @@
             font-family: sans-serif;
             height: 500px;
         }
-        .searchbar {
+        .search-input {
             height: 40px;
             width: 650px;
             margin-left: 0px;
@@ -91,7 +94,16 @@
             border: 1px solid #cecece;
             border-radius: 7px;
             background-color: #fbfbfb;
-
+            padding: 10px 10px 10px 40px;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 24 24"><path d="M10,2A8,8,0,1,1,2,10,8,8,0,0,1,10,2m0-2a10,10,0,1,0,10,10A10,10,0,0,0,10,0Zm6.32,16.9,5.38,5.38-1.42,1.42-5.38-5.38a10,10,0,1,0-1.42,1.42l5.38,5.38L19.7,18.32ZM10,17a7,7,0,1,1,7-7A7,7,0,0,1,10,17Z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: 10px center; /* Positioning the icon */
+            background-size: 20px 20px;
+        }
+        .search-input:focus {
+            border-color: #ddaa33;
+            outline: none;
+            box-shadow: 0 0 5px #ddaa33;
         }
         .create-invoice {
             height: 45px;
@@ -209,7 +221,7 @@
             <p>Here's the history of payments</p>
             <div id="content">
                 <nav>
-                    <input type="search" placeholder="Search.." class="searchbar">
+                    <input type="search" placeholder="Search.." class="search-input">
                     <a href="invoice.html" ><button type="submit" class="create-invoice">+ Create Invoice</button></a>
                 </nav>
                 <nav class="nav-bar">

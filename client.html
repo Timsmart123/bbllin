@@ -6,6 +6,9 @@
     <link rel="shortcut icon" href="image/logo.jpg" type="image/x-icon">
     <title>Travel Agency:Client</title>
     <style>
+        body{
+            width: fit-content;
+        }
         .client{
             color: #ddaa33;
             border-left: 4px solid #ddaa33;
@@ -47,9 +50,9 @@
             padding: 13px 0px;
             padding-left: 12px;
         }
-        #article{
+        #article {
             background-color: #fafafb;
-            padding-right: 105px;
+            padding-right: 39px;
             float: right;
             height: 720px;
         }
@@ -82,7 +85,7 @@
             font-family: sans-serif;
             height: 500px;
         }
-        .searchbar {
+        .search-input {
             height: 40px;
             width: 710px;
             margin-left: 0px;
@@ -90,7 +93,16 @@
             border: 1px solid #cecece;
             border-radius: 7px;
             background-color: #fbfbfb;
-
+            padding: 10px 10px 10px 40px;
+            background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 24 24"><path d="M10,2A8,8,0,1,1,2,10,8,8,0,0,1,10,2m0-2a10,10,0,1,0,10,10A10,10,0,0,0,10,0Zm6.32,16.9,5.38,5.38-1.42,1.42-5.38-5.38a10,10,0,1,0-1.42,1.42l5.38,5.38L19.7,18.32ZM10,17a7,7,0,1,1,7-7A7,7,0,0,1,10,17Z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: 10px center; /* Positioning the icon */
+            background-size: 20px 20px;
+        }
+        .search-input:focus {
+            border-color: #ddaa33;
+            outline: none;
+            box-shadow: 0 0 5px #ddaa33;
         }
         .create-invoice {
             height: 45px;
@@ -136,6 +148,10 @@
             background-color: #fcf7eb;
             text-align: center;
             border-bottom: 1.5px solid #fda403;
+        }
+        a {
+            text-decoration: none;
+            color: black;
         }
         td {
             text-align: center;
@@ -205,7 +221,7 @@
             <p>Here's the Clients list</p>
             <div id="content">
                 <nav>
-                    <input type="search" placeholder=" Search by name, email.." class="searchbar">
+                    <input type="search" placeholder=" Search by name, email.." class="search-input">
                     <a href="add-client.html" ><button type="submit" class="create-invoice">Add a new client</button></a>
                 </nav>
 
@@ -224,11 +240,11 @@
                         <td>No 2,Olonade Close,Ibadan,Oyo State,Nigeria</td>
                     </tr>
 
-                    <tr id="selected-row">
-                        <td>Adegoke Oluwadamilare</td>
-                        <td>adegoketemitope1909@gmail.com</td>
-                        <td>08160730668</td>
-                        <td>No 2,Olonade Close,Ibadan,Oyo State,Nigeria</td>
+                    <tr id="selected-row"> 
+                        <td><a href="client-profile.html">Adegoke Oluwadamilare</a></td>
+                        <td><a href="client-profile.html">adegoketemitope1909@gmail.com</a></td>
+                        <td><a href="client-profile.html">08160730668</a></td>
+                        <td><a href="client-profile.html">No 2,Olonade Close,Ibadan,Oyo State,Nigeria</a></td>
                     </tr>
 
                     <tr>

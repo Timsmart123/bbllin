@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="image/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <title>Add a new client</title>
     <style>
+        body{
+            width: fit-content;
+        }
         .client{
             color: #ddaa33;
             border-left: 4px solid #ddaa33;
@@ -34,6 +39,7 @@
             flex-direction: column;
             width: 255px;
             float: left;
+            
         }
         aside img{
             padding-right: 10px;
@@ -51,7 +57,7 @@
             }
         #article{
             background-color: #fafafb;
-            padding-right: 105px;
+            padding-right: 43px;
             float: right;
             height: 1300px;
         }
@@ -95,6 +101,9 @@
         input, select,textarea{
             display: block;
         }
+        #number{
+            width: 366px;
+        }
         #birthplace, #birthdate{
             width: 165px;
             height: 50px;
@@ -128,7 +137,7 @@
             background-color: #fafafa;
             margin-bottom: 30px;
             border-radius: 10px;
-            margin-top:80px
+            margin-top:50px
         }
         .colored{
             font-weight: 100;
@@ -136,9 +145,12 @@
         }
         .clienticon {
             display: inline;
-            width: 13%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
             margin-right: 35px;
             margin-bottom: 30px;
+            border-radius: 50%;
         }
         .upload {
             width: 160px;
@@ -161,7 +173,8 @@
             border-radius: 5px;
             font-size: medium;
             font-weight: bold;
-            margin-bottom: 40px;
+            cursor: pointer;
+            margin-top: 10px;
         }
         #flex{
             display: flex;
@@ -199,6 +212,45 @@
             font-size: medium;
             font-weight: bold;
             }
+
+
+
+        #buttons{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .upload-btn {
+            background-color: #ddaa33;
+            color: white;
+            padding: 19px 28px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .upload-image, .use-webcam {
+            background-color: #ddaa33; /* Same as "Upload Image" button */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        /* .use-webcam {
+            background-color: #ab201f;
+        } */
+
+        /* Hide the "No file chosen" text */
+        /* input[type="file"] {
+            display: none;
+        } */
+
     </style>
 
 </head>
@@ -227,15 +279,16 @@
                 <div id="clientpic">
                     <h4 class="clienttext">Client's Picture</h4>
                     <span id="flex">
-                        <img src="image\all-colored-svg\person-circle.svg" alt="" class="clienticon">
+                        <img src="image\all-colored-svg\person-circle.svg" alt="" class="clienticon" id="image">
                         <div id="buttons"> 
-                            <button class="upload">Upload Image</button>
+                            <label for="upload" class="upload-btn">Upload Image</label>
+                            <input id="upload" type="file" style="display: none;">
                             <button class="webcam">Use Webcam</button>
                         </div>
                     </span>
                 </div>
                 <h4>Enter clients details</h4>
-                <form action="">
+                <form action="client.html" method="post">
                     <div class="side1">
                         <label for="name" id="labelname">Full Name</label> <br>
                         <input type="text" id="name" name="name"><br>
@@ -301,7 +354,7 @@
                             <option value="">Osadugbe Ikeloluwa</option>
                         </select><br>
                         <label for="number" id="labelnumber">Phone Number</label> <br>
-                        <input type="number" id="number"><br>
+                        <input type="tel" id="number" vaidate><br><br>
                         <label for="mailing" id="labelmailing">Mailing Address</label> <br>
                         <textarea name="mailing" id="mailing" cols="20" rows="1"></textarea><br>
                         <label for="travelling" id="labeltravelling">Purpose of Travelling</label> <br>
@@ -315,4 +368,32 @@
         </div>
     </div>
 </body>
+    <script>
+    let upload = document.getElementById("upload");
+    let image = document.getElementById("image");
+    
+    upload.addEventListener("change" , (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                image.src = e.target.result;
+            };
+            reader.readAsDataURL(file)
+        };
+    });
+
+
+    var input = document.querySelector("#number");
+    window.intlTelInput(input, {
+    initialCountry: "auto",
+    geoIpLookup: function(success, failure) {
+        $.get("https://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        var countryCode = (resp && resp.country) ? resp.country : "us";
+        success(countryCode);
+        });
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js" // just for formatting/placeholders etc
+    });
+    </script>
 </html>

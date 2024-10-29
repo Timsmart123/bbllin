@@ -6,6 +6,9 @@
     <link rel="shortcut icon" href="image/logo.jpg" type="image/x-icon">
     <title>Travel Agency:Task</title>
     <style>
+        body{
+            width: fit-content;
+        }
         .task{
             color: #ddaa33;
             border-left: 4px solid #ddaa33;
@@ -51,7 +54,7 @@
             }
         #article{
             background-color: #fafafb;
-            padding-right: 105px;
+            padding-right: 43px;
             float: right;
             height: 810px;
         }
@@ -137,6 +140,18 @@
         #label-time-2{
             padding-left: 137px;
         }
+        .calendar-input {
+
+            background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="gray" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11zm-7-7h5v5h-5zm-7 0h5v5H5zm0-7h14v2H5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            background-size: 20px 20px;
+            border: 0.5px solid;
+            border-radius: 3px;
+            padding: 2px 0px;
+            padding-left: 35px;
+            width: 174px;
+        }
     </style>
 
 </head>
@@ -163,17 +178,17 @@
             <p>Create a new task here</p>
             <div id="content">
                 <h3><b>Enter task details</b></h3>
-                <form action="payment.html">
+                <form action="task-report.html">
                     <div id="side1">
                         <label for="title" id="labeltitle">Title</label> <br><br>
                         <input type="text" id="title" name="title"><br><br>
                         <label for="startdate" id="labelstartdate">Start Date</label>
                         <label for="time" id="label-time-1">Time</label><br><br>
-                        <input type="text" id="startdate" placeholder="&#xF214;">
+                        <input type="text" id="startdate" placeholder="" class="calendar-input">
                         <input type="text" id="time"><br><br>
                         <label for="duedate" id="labelduedate">Due Date</label> 
                         <label for="time2" id="label-time-2">Time</label> <br><br>
-                        <input type="text" id="duedate" placeholder="&#xF214;">
+                        <input type="text" id="duedate" placeholder="" class="calendar-input">
                         <input type="text" id="time2"><br><br>
                         <label for="description" id="labeldescription">Description</label> <br><br>
                         <input id="description">
